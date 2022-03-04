@@ -10,4 +10,4 @@ spec:
   ports:
     - port: 8090        # 本 Service 的端口
       targetPort: 8080  # 容器端口
-      nodePort: 31000   # 节点端口，范围固定 30000 ~ 32767
+      nodePort: 31001   # 节点端口，范围固定 30000 ~ 32767
