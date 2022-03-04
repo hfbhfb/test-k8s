@@ -4,11 +4,11 @@ metadata:
   # 部署名字
   name: test-k8s
 spec:
-  replicas: 5
+  replicas: 3
   # 用来查找关联的 Pod，所有标签都匹配才行
   selector:
     matchLabels:
-      app: kubectl get pods -o wide
+      app: test-k8s
   # 定义 Pod 相关数据
   template:
     metadata:
