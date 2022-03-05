@@ -22,9 +22,13 @@ spec:
             - mountPath: /data/db # 容器里面的挂载路径
               name: mongo-data    # 卷名字，必须跟下面定义的名字一致
       volumes:
+#        - name: mongo-data              # 卷名字
+#          hostPath:
+#            path: /data/mongo-data      # 节点上的路径
+#            type: DirectoryOrCreate     # 指向一个目录，不存在时自动创建
         - name: mongo-data
-            persistentVolumeClaim:
-              claimName: mongodata
+          persistentVolumeClaim:
+            claimName: mongodata
 ---
 apiVersion: v1
 kind: Service
