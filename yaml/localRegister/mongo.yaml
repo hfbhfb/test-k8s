@@ -22,13 +22,10 @@ spec:
             - mountPath: /data/db # 容器里面的挂载路径
               name: gz-mongo-data    # 卷名字，必须跟下面定义的名字一致
       volumes:
-        - name: gz-mongo-data              # 卷名字
-          hostPath:
-            path: /data/gz-mongo-data      # 节点上的路径
-            type: DirectoryOrCreate     # 指向一个目录，不存在时自动创建
-#        - name: gz-mongo-data
-#            persistentVolumeClaim:
-#              claimName: mongodata
+        - name: gz-mongo-data
+          persistentVolumeClaim:
+            claimName: mongodata
+
 ---
 apiVersion: v1
 kind: Service
