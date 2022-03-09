@@ -24,8 +24,7 @@ spec:
       volumes:
         - name: gz-mongo-data
           persistentVolumeClaim:
-            claimName: mongodata
-
+            claimName: gzmongodata
 ---
 apiVersion: v1
 kind: Service

@@ -9,7 +9,7 @@ spec:
   accessModes:
     - ReadWriteOnce       # 卷可以被一个节点以读写方式挂载
   persistentVolumeReclaimPolicy: Delete
-  storageClassName: gz-local-storage
+  storageClassName: local-storage
   local:
     path: /root/gz-mongo-data
   nodeAffinity:
